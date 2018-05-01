@@ -1,0 +1,17 @@
+> load examples/fans
+> load examples/teams
+> load examples/records
+> load examples/badTable
+ERROR: File not found exception
+> print examples/fans
+Lastname string,Firstname string,TeamName string
+'Lee','Maurice','Mets'
+'Lee','Maurice','Steelers'
+'Ray','Mitas','Patriots'
+'Hwang','Alex','Cloud9'
+'Rulison','Jared','EnVyUs'
+'Fang','Vivian','Golden Bears'
+> select Firstname,Lastname,TeamName from examples/fans where Lastname >= 'Lee'
+ERROR: invalid condition: Lastname >= 'Lee'
+> select Mascot,YearEstablished from teams where YearEstablished > 1942
+Mascot string,YearEstablished int
